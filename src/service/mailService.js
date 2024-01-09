@@ -14,7 +14,7 @@ class MailService {
 
     sendEmail(targetEmail, content) {
         const message = {
-            from: 'Open Music App',
+            from: 'Open Music App app-exports@openmusic,com',
             to: targetEmail,
             subject: 'Ekspor Playlist',
             text: 'Lampiran hasil dari ekspor playlist',
@@ -26,7 +26,7 @@ class MailService {
             ]
         }
 
-        return this._transporter.sendEmail(message)
+        return this._transporter.sendMail(message)
     }
 }
 
